@@ -1,1 +1,1 @@
-# tila.com
+# react-redux-boilerplate
