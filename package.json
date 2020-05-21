@@ -3,7 +3,10 @@
   "scripts": {
     "deploy": "now && now alias",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "env-cmd -f .env.prod react-scripts build",
+    "build:dev": "env-cmd -f .env.dev react-scripts build",
+    "build:stg": "env-cmd -f .env.stg react-scripts build",
+    "build:prod": "env-cmd -f .env.prod react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "pretest": "eslint 'src/**/*.js' . --fix"
@@ -22,6 +25,8 @@
   },
   "dependencies": {
     "connected-react-router": "4.5.0",
+    "env-cmd": "^10.1.0",
+    "express": "^4.17.1",
     "immer": "^6.0.5",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
