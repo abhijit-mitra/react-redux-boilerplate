@@ -1,5 +1,5 @@
-import LoaderHOC from './LoaderHOC';
+import loaderHoc from './loaderHoc';
 
-export{
-  LoaderHOC
-}
+export {
+  loaderHoc,
+};

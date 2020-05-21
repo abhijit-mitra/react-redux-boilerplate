@@ -1,15 +1,15 @@
 import React from 'react';
 
-const Input = ({prepend, append,...rest}) => (
-  <div className="input-group mb-3">
-  {
-    prepend &&
+const Input = ({prepend, append, ...rest}) => (
+  <div className="input-group">
+    {
+      prepend &&
     <div className="input-group-prepend">
       <div className="input-group-text">
         {prepend}
       </div>
     </div>
-  }
+    }
     <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" {...rest}/>
     {
       append &&
@@ -23,8 +23,8 @@ const Input = ({prepend, append,...rest}) => (
 );
 
 Input.defaultProps={
-  prepend:null,
-  append:null,
-}
+  prepend: null,
+  append: null,
+};
 
 export default Input;
