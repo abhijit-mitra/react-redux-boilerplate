@@ -1,12 +1,14 @@
 import React from 'react';
-import {Route} from 'react-router-dom';
+import {Switch, Route} from 'react-router-dom';
 import Home from './components/pages/';
-import {Header} from './components/organisms';
+import {Header} from './components/common/organisms';
 
 const App = () => (
   <div className='w-100'>
     <Header/>
-    <Route exact path="/" component={Home} />
+    <Switch>
+      <Route exact path="/" component={Home} />
+    </Switch>
   </div>
 );
 
